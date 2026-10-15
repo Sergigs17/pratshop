@@ -46,7 +46,8 @@ npm run lint
 
 ## Disseny
 
-- **Arxiu de Penpot:** [Afegir aquí l'enllaç al projecte de Penpot]
+- **Arxiu de Penpot:** [Veure disseny de VerdeVivo](https://design.penpot.app/#/view?file-id=129977ce-683b-806a-8008-cb7a0606fed4&page-id=129977ce-683b-806a-8008-cb7a0606fed5&section=interactions&frame-id=a2f5fca5-470b-808f-8008-cb7c30491383&index=0&share-id=86ee6f83-3406-4eeb-8ff5-e5c362fef1cc)
+
 - **Captures de disseny:** `docs/disseny/`
 - **Codi generat:** `docs/generat/`
 
@@ -66,7 +67,18 @@ S'han utilitzat eines d'intel·ligència artificial com a suport durant el desen
 
 ## Proves
 
-Afegiré els casos de prova realitzats i els seus resultats abans del lliurament.
+| Núm. | Cas de prova | Resultat esperat |
+|---|---|---|
+| 1 | Obrir el catàleg | Es mostren els productes disponibles. |
+| 2 | Cercar un producte pel nom | Es mostren els productes coincidents. |
+| 3 | Filtrar per categoria | Només es mostren els productes de la categoria seleccionada. |
+| 4 | Obrir el detall d'un producte | Es mostren les dades del producte seleccionat. |
+| 5 | Intentar comprar un producte esgotat | No es permet afegir-lo al carro. |
+| 6 | Afegir un producte al carro i canviar-ne la quantitat | S'actualitzen la quantitat i el subtotal. |
+| 7 | Completar el formulari de compra amb dades vàlides | Es mostra la confirmació de la comanda. |
+| 8 | Accedir a una ruta inexistent | Es mostra la pàgina 404. |
+
+Les proves funcionals s'han de verificar manualment abans del lliurament. La compilació de producció s'ha comprovat amb `npm run build`.
 
 ## Autoría
 
