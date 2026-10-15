@@ -1,0 +1,105 @@
+
+.pagina {
+  width: min(760px, calc(100% - 40px));
+  margin: 40px auto 64px;
+}
+
+.pagina h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.intro {
+  margin-bottom: 28px;
+  color: var(--color-text-suau);
+  line-height: 1.6;
+}
+
+.formulari {
+  display: grid;
+  gap: 20px;
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--color-borde);
+  border-radius: 18px;
+  background: var(--color-superficie);
+}
+
+.formulari > label:not(.condicions) {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.formulari input:not([type='checkbox']),
+.formulari select {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: 9px;
+  background: var(--color-superficie);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.formulari input:focus-visible,
+.formulari select:focus-visible,
+.boto:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 3px;
+}
+
+.formulari [aria-invalid='true'] {
+  border-color: #b42318;
+}
+
+.formulari span {
+  color: #b42318;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.condicions {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.condicions input {
+  margin-top: 4px;
+  accent-color: var(--color-primari);
+}
+
+.total {
+  margin: 8px 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.boto {
+  width: 100%;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-primari);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.boto:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .pagina {
+    width: calc(100% - 28px);
+    margin-top: 24px;
+  }
+
+  .formulari {
+    padding: 18px;
+  }
+}

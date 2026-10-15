@@ -1,0 +1,108 @@
+.capcalera {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-superficie);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.contingut {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 78px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.icona {
+  font-size: 2rem;
+}
+
+.marca strong,
+.marca small {
+  display: block;
+}
+
+.marca strong {
+  font-size: 1.3rem;
+  letter-spacing: -0.04em;
+}
+
+.marca small {
+  margin-top: 3px;
+  color: var(--color-text-suau);
+  font-size: 0.75rem;
+}
+
+.navegacio {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.enllac,
+.actiu {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enllac:hover,
+.actiu {
+  background: var(--color-primari-suau);
+  color: var(--color-primari);
+}
+
+.insignia {
+  display: inline-grid;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--color-primari);
+  color: white;
+  font-size: 0.75rem;
+}
+
+.enllac:focus-visible,
+.actiu:focus-visible,
+.marca:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 4px;
+}
+
+@media (max-width: 480px) {
+  .contingut {
+    width: calc(100% - 20px);
+    min-height: 70px;
+    gap: 8px;
+  }
+
+  .marca strong {
+    font-size: 1.1rem;
+  }
+
+  .marca small {
+    display: none;
+  }
+
+  .navegacio {
+    gap: 4px;
+  }
+}

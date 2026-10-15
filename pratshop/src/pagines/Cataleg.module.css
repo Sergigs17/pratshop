@@ -1,0 +1,171 @@
+.pagina {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 36px 0 72px;
+}
+
+.introduccio {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(32px, 6vw, 72px);
+  border-radius: 28px;
+  background: var(--color-primari-suau);
+}
+
+.etiqueta {
+  margin: 0 0 14px;
+  color: var(--color-primari);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.introduccio h1 {
+  max-width: 620px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  letter-spacing: -0.055em;
+  line-height: 1.05;
+}
+
+.introduccio > p:last-child {
+  max-width: 520px;
+  margin: 20px 0 0;
+  color: var(--color-text-suau);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.seccioCataleg {
+  padding-top: 48px;
+}
+
+.capcaleraCataleg {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.capcaleraCataleg h2 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: -0.04em;
+}
+
+.capcaleraCataleg p {
+  margin: 8px 0 0;
+  color: var(--color-text-suau);
+}
+
+.campCerca input {
+  width: min(320px, 80vw);
+  padding: 13px 16px;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  background: var(--color-superficie);
+  color: var(--color-text);
+}
+
+.campCerca input:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 3px;
+}
+
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.filtre,
+.filtreActiu {
+  padding: 10px 16px;
+  border: 1px solid var(--color-borde);
+  border-radius: 999px;
+  background: var(--color-superficie);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.filtre:hover,
+.filtreActiu {
+  border-color: var(--color-primari);
+  background: var(--color-primari);
+  color: var(--color-superficie);
+}
+
+.filtre:focus-visible,
+.filtreActiu:focus-visible,
+.botoNetejar:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 3px;
+}
+
+.resultats {
+  margin: 24px 0 16px;
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+}
+
+.quadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 24px;
+}
+
+.buit {
+  padding: 48px 20px;
+  border: 1px dashed var(--color-borde);
+  border-radius: var(--radi-gran);
+  text-align: center;
+}
+
+.buit > span {
+  font-size: 2rem;
+}
+
+.buit h3 {
+  color: var(--color-text);
+}
+
+.buit p {
+  color: var(--color-text-suau);
+}
+
+.botoNetejar {
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-primari);
+  color: var(--color-superficie);
+  cursor: pointer;
+}
+
+.visualmentOcult {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .pagina {
+    width: calc(100% - 24px);
+    padding-top: 20px;
+  }
+
+  .seccioCataleg {
+    padding-top: 32px;
+  }
+
+  .quadricula {
+    gap: 16px;
+  }
+}

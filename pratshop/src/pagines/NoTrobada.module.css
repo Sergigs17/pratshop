@@ -1,0 +1,102 @@
+
+.pagina {
+  display: grid;
+  min-height: 65vh;
+  place-items: center;
+  padding: 3rem 1rem;
+}
+
+.targeta {
+  width: min(100%, 680px);
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 1.5rem;
+  box-shadow: var(--ombra-suau);
+}
+
+.codi {
+  display: block;
+  color: var(--color-accent);
+  font-size: clamp(5rem, 16vw, 8rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.etiqueta {
+  margin-top: 1.5rem;
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.targeta h1 {
+  margin: 1rem 0;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.missatge {
+  max-width: 480px;
+  margin: 0 auto;
+  color: var(--color-text-secundari);
+  line-height: 1.7;
+}
+
+.accions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.boto {
+  padding: 0.9rem 1.3rem;
+  color: var(--color-boto-text);
+  background: var(--color-accent);
+  border-radius: 0.7rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.boto:hover {
+  background: var(--color-accent-hover);
+}
+
+.enllac {
+  padding: 0.75rem;
+  color: var(--color-text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.enllac:hover {
+  text-decoration: underline;
+}
+
+.boto:focus-visible,
+.enllac:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.decoracio {
+  display: block;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+  .targeta {
+    padding: 2rem 1rem;
+  }
+
+  .accions {
+    flex-direction: column;
+  }
+}

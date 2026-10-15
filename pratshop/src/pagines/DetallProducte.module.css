@@ -1,0 +1,111 @@
+
+.pagina {
+  width: min(1120px, calc(100% - 40px));
+  margin: 32px auto 64px;
+}
+
+.tornar {
+  margin-bottom: 28px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  background: var(--color-superficie);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.producte {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.imatge {
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--color-superficie);
+}
+
+.imatge img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.info h1 {
+  margin: 12px 0 20px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.etiqueta {
+  color: var(--color-primari);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.descripcio {
+  color: var(--color-text-suau);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.preu {
+  margin: 24px 0 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.estoc {
+  color: var(--color-primari);
+}
+
+.afegir {
+  width: 100%;
+  margin: 16px 0;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-primari);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.afegir:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.tornar:focus-visible,
+.afegir:focus-visible,
+.enllac:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 3px;
+}
+
+.nota {
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+}
+
+.enllac {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--color-primari);
+}
+
+@media (max-width: 700px) {
+  .producte {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .imatge img {
+    aspect-ratio: 1 / 1;
+  }
+}

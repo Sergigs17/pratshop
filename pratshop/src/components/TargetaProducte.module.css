@@ -1,0 +1,120 @@
+.targeta {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radi-gran);
+  background: var(--color-superficie);
+  box-shadow: var(--ombra-suau);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.targeta:hover {
+  transform: translateY(-4px);
+}
+
+.enllacImatge {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--color-primari-suau);
+}
+
+.imatge {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 250ms ease;
+}
+
+.targeta:hover .imatge {
+  transform: scale(1.04);
+}
+
+.etiquetaEsgotat {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: var(--color-text);
+  color: var(--color-superficie);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cos {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.categoria {
+  margin: 0 0 8px;
+  color: var(--color-primari);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nom {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.descripcio {
+  flex: 1;
+  margin: 10px 0 20px;
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.peu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.preu {
+  color: var(--color-text);
+  font-size: 1.1rem;
+}
+
+.boto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: var(--color-primari);
+  color: var(--color-superficie);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.boto:hover {
+  opacity: 0.85;
+}
+
+.boto:focus-visible,
+.enllacImatge:focus-visible {
+  outline: 3px solid var(--color-primari);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .targeta,
+  .imatge {
+    transition: none;
+  }
+}
